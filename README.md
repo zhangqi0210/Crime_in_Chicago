@@ -2,8 +2,8 @@
 ![Python 3.x](https://img.shields.io/badge/python-3.x-blue.svg)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhangqi0210%2FCrime_in_Chicago&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-# Crime_in_Chicago
-The project titled "Crime in Chicago" is an in-depth data analysis initiative.
+# Crime in Chicago
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Objectives](#objectives)
@@ -44,9 +44,10 @@ The project makes use of several Python libraries for data manipulation, analysi
 
 You can install these packages using pip:
 
-\```bash
+```
+bash
 pip install pandas matplotlib seaborn numpy scikit-learn
-\```
+```
 
 ---
 
@@ -148,13 +149,5 @@ df = pd.get_dummies(df, columns=['Category'])
 2. Navigate to the project directory.
 3. Install all the dependencies mentioned in the [Dependencies](#dependencies) section.
 4. Run the Jupyter Notebook titled "Final Project 2 Notebook.ipynb".
-
-```
-bash
-git clone [repository_link]
-cd [project_directory]
-pip install -r requirements.txt
-jupyter notebook "Final Project 2 Notebook.ipynb"
-```
 
 ---
