@@ -6,14 +6,12 @@
 The project titled "Crime in Chicago" is an in-depth data analysis initiative.
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Project Members](#project-members)
-3. [Objectives](#objectives)
-4. [Dependencies](#dependencies)
-5. [Data Preprocessing](#data-preprocessing)
-6. [Analysis Techniques](#analysis-techniques)
-7. [Technical Deep Dive](#technical-deep-dive)
-8. [How to Run the Project](#how-to-run-the-project)
-9. [License](#license)
+2. [Objectives](#objectives)
+3. [Dependencies](#dependencies)
+4. [Data Preprocessing](#data-preprocessing)
+5. [Analysis Techniques](#analysis-techniques)
+6. [Technical Deep Dive](#technical-deep-dive)
+7. [How to Run the Project](#how-to-run-the-project)
 
 ---
 
@@ -81,7 +79,8 @@ We used advanced time-series methods like ARIMA (AutoRegressive Integrated Movin
 
 The ARIMA model was fine-tuned to find the best-fit model, which was then used for forecasting future crime rates.
 
-\```python
+```
+python
 from statsmodels.tsa.arima_model import ARIMA
 
 # Fit the ARIMA model
@@ -90,13 +89,14 @@ model_fit = model.fit(disp=0)
 
 # Forecast
 forecast = model_fit.forecast(steps=10)
-\```
+```
 
 #### Correlation Metrics
 
 To explore the relationship between different variables, we computed Pearson's correlation coefficients and visualized them using heatmaps.
 
-\```python
+```
+python
 import seaborn as sns
 
 # Compute correlation matrix
@@ -104,13 +104,14 @@ correlation_matrix = df.corr()
 
 # Generate a heatmap
 sns.heatmap(correlation_matrix, annot=True)
-\```
+```
 
 ### Machine Learning for Forecasting
 
 We employed machine learning techniques like Random Forest and XGBoost for more accurate crime rate predictions. Feature importance was evaluated to understand which variables contribute most to the crime rate.
 
-\```python
+```
+python
 from sklearn.ensemble import RandomForestRegressor
 
 # Initialize and fit the model
@@ -119,13 +120,14 @@ model.fit(X_train, y_train)
 
 # Predict
 y_pred = model.predict(X_test)
-\```
+```
 
 ### Data Preprocessing
 
 Data preprocessing was handled using Pandas. Missing values were imputed, and categorical variables were encoded.
 
-\```python
+```
+python
 import pandas as pd
 
 # Drop unnecessary columns
@@ -136,7 +138,7 @@ df.fillna(method='ffill', inplace=True)
 
 # Encode categorical variables
 df = pd.get_dummies(df, columns=['Category'])
-\```
+```
 
 ---
 
@@ -147,11 +149,12 @@ df = pd.get_dummies(df, columns=['Category'])
 3. Install all the dependencies mentioned in the [Dependencies](#dependencies) section.
 4. Run the Jupyter Notebook titled "Final Project 2 Notebook.ipynb".
 
-\```bash
+```
+bash
 git clone [repository_link]
 cd [project_directory]
 pip install -r requirements.txt
 jupyter notebook "Final Project 2 Notebook.ipynb"
-\```
+```
 
 ---
